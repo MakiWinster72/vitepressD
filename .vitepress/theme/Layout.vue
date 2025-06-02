@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <template #doc-footer-before>
+    <template #doc-after>
       <Footer />
     </template>
     <template #aside-outline-before>
