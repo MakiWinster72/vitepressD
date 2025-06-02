@@ -15,15 +15,39 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: '首页', link: '/' },
-          { text: 'Markdown 示例', link: '/markdown-examples' },
-          { text: 'Runtime API 示例', link: '/api-examples' }
+          { text: '文章', link: '/articles/' },
+          { text: '关于', link: '/about' }
         ],
         sidebar: [
           {
-            text: '示例',
+            text: '文章',
             items: [
-              { text: 'Markdown 示例', link: '/markdown-examples' },
-              { text: 'Runtime API 示例', link: '/api-examples' }
+              { text: '文章索引', link: '/articles/' },
+              {
+                text: '工具使用',
+                items: [
+                  { text: '使用 Rclone 挂载 OSS 到 Obsidian', link: '/articles/tools/mountOSSOBSwithRclone' },
+                  { text: 'DeepSeek 插件在 Obsidian 中的使用', link: '/articles/tools/DeepSeekPluginsinObsidian' },
+                  { text: '准备文件给 AI 处理', link: '/articles/tools/PrepareURFilestoAI' },
+                  { text: '重置 Cursor 设置', link: '/articles/tools/resetCursor' },
+                  { text: '输入法提示', link: '/articles/tools/ImTip' }
+                ]
+              },
+              {
+                text: '经验分享',
+                items: [
+                  { text: '3分钟部署静态网站', link: '/articles/experience/static-site-deploy-under-3' },
+                  { text: '解决 MySQL 8.0 无法启动且无数据文件夹问题', link: '/articles/experience/solvingProb-cannLaunchMySQL80andNodataFolder' },
+                  { text: '在 Ubuntu 中使用 Clash', link: '/articles/experience/UsingClashinUbuntu' }
+                ]
+              },
+              {
+                text: '思考随笔',
+                items: [
+                  { text: '系统分析师考试心得', link: '/articles/mind/system-analyst-exam-thoughts' },
+                  { text: '为什么不改变方向', link: '/articles/mind/whynotChangeDirection' }
+                ]
+              }
             ]
           }
         ],
@@ -61,15 +85,39 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: 'Home', link: '/en/' },
-          { text: 'Markdown Examples', link: '/en/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/en/api-examples' }
+          { text: 'Articles', link: '/en/articles/' },
+          { text: 'About', link: '/en/about' }
         ],
         sidebar: [
           {
-            text: 'Examples',
+            text: 'Articles',
             items: [
-              { text: 'Markdown Examples', link: '/en/markdown-examples' },
-              { text: 'Runtime API Examples', link: '/en/api-examples' }
+              { text: 'Articles Index', link: '/en/articles/' },
+              {
+                text: 'Tools',
+                items: [
+                  { text: 'Mount OSS to Obsidian with Rclone', link: '/en/articles/tools/mountOSSOBSwithRclone' },
+                  { text: 'Using DeepSeek Plugin in Obsidian', link: '/en/articles/tools/DeepSeekPluginsinObsidian' },
+                  { text: 'Prepare Files for AI Processing', link: '/en/articles/tools/PrepareURFilestoAI' },
+                  { text: 'Reset Cursor Settings', link: '/en/articles/tools/resetCursor' },
+                  { text: 'Input Method Tips', link: '/en/articles/tools/ImTip' }
+                ]
+              },
+              {
+                text: 'Experience',
+                items: [
+                  { text: 'Deploy Static Site in 3 Minutes', link: '/en/articles/experience/static-site-deploy-under-3' },
+                  { text: 'Solving MySQL 8.0 Launch and Data Folder Issues', link: '/en/articles/experience/solvingProb-cannLaunchMySQL80andNodataFolder' },
+                  { text: 'Using Clash in Ubuntu', link: '/en/articles/experience/UsingClashinUbuntu' }
+                ]
+              },
+              {
+                text: 'Thoughts',
+                items: [
+                  { text: 'System Analyst Exam Experience', link: '/en/articles/mind/system-analyst-exam-thoughts' },
+                  { text: 'Why Not Change Direction', link: '/en/articles/mind/whynotChangeDirection' }
+                ]
+              }
             ]
           }
         ],

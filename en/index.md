@@ -8,18 +8,18 @@ hero:
   tagline: Get from IE, reward from IE, thx to IE!
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Browse Articles
+      link: /en/articles/
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: About Me
+      link: /en/about
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Tech Sharing
+    details: Sharing technical problems and solutions I encounter in work and study, including development tools, system configuration, programming skills, and other practical content.
+  - title: Experience Summary
+    details: Recording my learning insights, project experiences, and career development thoughts, hoping to help you who are also on the path of growth.
+  - title: Life Notes
+    details: Recording life insights, sharing travel experiences and daily thoughts, making life more meaningful.
 ---
 
