@@ -2,18 +2,22 @@
 :root {
   --vp-c-bg: #ffffff;
   --grid-color: rgba(0, 0, 0, 0.05);
+  /* 覆盖导航栏背景颜色变量，降低透明度 */
+  --vp-local-nav-bg-color: rgba(255, 255, 255, 0.6); 
 }
 
 .dark {
   --vp-c-bg: #1a1a1a;
   --grid-color: rgba(255, 255, 255, 0.05);
+  /* 暗色模式下覆盖导航栏背景颜色变量，降低透明度 */
+  --vp-local-nav-bg-color: rgba(26, 26, 26, 0.6); 
 }
 
 .VPContent {
   background-image: 
     linear-gradient(var(--grid-color) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
-  background-size: 20px 20px;
+  background-size: 20px 20px; /* 网格大小 */
   background-position: center center;
 }
 
@@ -61,8 +65,45 @@
 :root {
   /* 应用 HarmonyOS Sans SC 作为默认字体 */
   --vp-font-family: 'HarmonyOS Sans SC', sans-serif;
+  /* 其他 root 变量 */
+  --vp-c-bg: #ffffff; /* 确保这里保留原有的背景色变量定义 */
+  --grid-color: rgba(0, 0, 0, 0.05); /* 确保这里保留原有的网格颜色变量定义 */
+  --vp-local-nav-bg-color: rgba(255, 255, 255, 0.6); /* 覆盖导航栏背景颜色变量，降低透明度 */
+}
+
+.dark {
+  --vp-c-bg: #1a1a1a; /* 确保这里保留原有的暗色模式背景色变量定义 */
+  --grid-color: rgba(255, 255, 255, 0.05); /* 确保这里保留原有的暗色模式网格颜色变量定义 */
+  --vp-local-nav-bg-color: rgba(26, 26, 26, 0.6); /* 暗色模式下覆盖导航栏背景颜色变量，降低透明度 */
 }
 
 body {
   font-family: 'HarmonyOS Sans SC', sans-serif;
+}
+
+/* 导航栏半透明模糊效果 */
+.VPLocalNav {
+  -webkit-backdrop-filter: saturate(50%) blur(4px);
+  backdrop-filter: saturate(50%) blur(3px);
+  background-color: unset !important;
+  background-image: radial-gradient(transparent 1px, var(--vp-nav-bg-color) 3px);
+  background-size: 4px 4px;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+/* 导航栏网格覆盖层 */
+.VPLocalNav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 20px 20px; /* 网格大小 */
+  background-position: center center;
+  opacity: 0.5; /* 网格透明度 */
+  z-index: -1; /* 确保在导航栏内容下方 */
 }
