@@ -3,6 +3,6 @@ import './custom.css'
 import Layout from './Layout.vue'
 
 export default {
-  ...DefaultTheme,
+  extends: DefaultTheme,
   Layout
 } 

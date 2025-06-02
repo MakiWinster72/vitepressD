@@ -4,6 +4,11 @@
   --grid-color: rgba(0, 0, 0, 0.05);
   /* 覆盖导航栏背景颜色变量，降低透明度 */
   --vp-local-nav-bg-color: rgba(255, 255, 255, 0.6); 
+  /* 亮色模式链接颜色 */
+  --vp-link-color: #3533b3;
+  --vp-link-hover-bg: #3eaf7c;
+  --vp-link-hover-text: #3eaf7c;
+  --vp-link-border: #3eaf7c;
 }
 
 .dark {
@@ -11,6 +16,11 @@
   --grid-color: rgba(255, 255, 255, 0.05);
   /* 暗色模式下覆盖导航栏背景颜色变量，降低透明度 */
   --vp-local-nav-bg-color: rgba(26, 26, 26, 0.6); 
+  /* 暗色模式链接颜色 */
+  --vp-link-color: #4abf8a;
+  --vp-link-hover-bg: #4abf8a;
+  --vp-link-hover-text: #ffffff;
+  --vp-link-border: #4abf8a;
 }
 
 .VPContent {
@@ -176,4 +186,60 @@ body {
 
 .VPButton:hover {
   transform: translateY(-1px);
+}
+
+/* 链接动画关键帧 */
+@keyframes highlightFromBottom {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+/* 正文中的链接样式 */
+.vp-doc a {
+  position: relative;
+  text-decoration: none;
+  color: var(--vp-link-color);
+  padding: 2px 1px;
+  transition: color 0.25s;
+  overflow: hidden;
+}
+
+.vp-doc a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed var(--vp-link-border);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.vp-doc a:hover {
+  color: var(--vp-link-hover-text);
+}
+
+.vp-doc a:hover::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--vp-link-hover-bg);
+  border-radius: 2px;
+  z-index: -1;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  animation: highlightFromBottom 0.3s ease forwards;
+}
+
+.vp-doc a:hover::after {
+  transform: scaleX(1);
+  border-bottom-color: var(--vp-link-hover-text);
 }

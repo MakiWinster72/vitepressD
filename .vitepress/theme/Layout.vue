@@ -1,19 +1,17 @@
 <template>
-  <Layout>
+  <DefaultTheme.Layout>
     <template #doc-after>
       <Footer />
     </template>
     <template #aside-outline-before>
       <div class="outline-before"></div>
     </template>
-  </Layout>
+  </DefaultTheme.Layout>
 </template>
 
 <script setup>
 import DefaultTheme from 'vitepress/theme'
 import Footer from './components/Footer.vue'
-
-const { Layout } = DefaultTheme
 </script>
 
 <style>
