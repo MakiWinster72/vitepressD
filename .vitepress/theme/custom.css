@@ -1,0 +1,68 @@
+/* 网格背景样式 */
+:root {
+  --vp-c-bg: #ffffff;
+  --grid-color: rgba(0, 0, 0, 0.05);
+}
+
+.dark {
+  --vp-c-bg: #1a1a1a;
+  --grid-color: rgba(255, 255, 255, 0.05);
+}
+
+.VPContent {
+  background-image: 
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: center center;
+}
+
+/* 确保内容区域有适当的背景色 */
+.VPContent.has-sidebar {
+  background-color: var(--vp-c-bg);
+}
+
+/* 调整内容区域的padding，使网格效果更明显 */
+.VPContent.has-sidebar .content-container {
+  padding: 24px;
+}
+
+/* 引入并应用 HarmonyOS Sans SC 字体 */
+@font-face {
+  font-family: 'HarmonyOS Sans SC';
+  font-weight: 300;
+  src: url('/assets/fonts/HarmonyOS_Sans_SC_Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'HarmonyOS Sans SC';
+  font-weight: 400;
+  src: url('/assets/fonts/HarmonyOS_Sans_SC_Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'HarmonyOS Sans SC';
+  font-weight: 500;
+  src: url('/assets/fonts/HarmonyOS_Sans_SC_Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'HarmonyOS Sans SC';
+  font-weight: 700;
+  src: url('/assets/fonts/HarmonyOS_Sans_SC_Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'HarmonyOS Sans SC';
+  font-weight: 900;
+  src: url('/assets/fonts/HarmonyOS_Sans_SC_Black.woff2') format('woff2');
+}
+
+:root {
+  /* 应用 HarmonyOS Sans SC 作为默认字体 */
+  --vp-font-family: 'HarmonyOS Sans SC', sans-serif;
+}
+
+body {
+  font-family: 'HarmonyOS Sans SC', sans-serif;
+}
