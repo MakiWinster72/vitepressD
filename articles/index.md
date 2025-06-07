@@ -20,3 +20,4 @@ description: 所有文章的索引页面
 ## 思考随笔
 - [系统分析师考试心得](/articles/mind/system-analyst-exam-thoughts)
 - [为什么不改变方向](/articles/mind/whynotChangeDirection)
+- [停止写优雅的代码和花哨的技巧](/articles/mind/stop_writing_elegant_code_with_fancy_tricks)

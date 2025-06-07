@@ -20,3 +20,4 @@ description: Index page for all articles
 ## Thoughts
 - [System Analyst Exam Experience](/en/articles/mind/system-analyst-exam-thoughts)
 - [Why Not Change Direction](/en/articles/mind/whynotChangeDirection)
+- [Stop Writing Elegant Code with Fancy Tricks](/en/articles/mind/stop_writing_elegant_code_with_fancy_tricks)

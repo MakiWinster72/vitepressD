@@ -77,7 +77,8 @@ export default defineConfig({
                 text: '思考随笔',
                 items: [
                   { text: '系统分析师考试心得', link: '/articles/mind/system-analyst-exam-thoughts' },
-                  { text: '为什么不改变方向', link: '/articles/mind/whynotChangeDirection' }
+                  { text: '为什么不尝试改变一下方向？', link: '/articles/mind/whynotChangeDirection' },
+                  { text: '停止写优雅的代码和花哨的技巧', link: '/articles/mind/stop_writing_elegant_code_with_fancy_tricks' }
                 ]
               }
             ]
@@ -127,7 +128,8 @@ export default defineConfig({
                 text: 'Thoughts',
                 items: [
                   { text: 'System Analyst Exam Experience', link: '/en/articles/mind/system-analyst-exam-thoughts' },
-                  { text: 'Why Not Change Direction', link: '/en/articles/mind/whynotChangeDirection' }
+                  { text: 'Why Not try Change ur Direction?', link: '/en/articles/mind/whynotChangeDirection' },
+                  { text: 'Stop Writing Elegant Code with Fancy Tricks', link: '/en/articles/mind/stop_writing_elegant_code_with_fancy_tricks' }
                 ]
               }
             ]

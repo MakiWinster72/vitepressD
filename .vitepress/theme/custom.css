@@ -9,6 +9,8 @@
   --vp-link-hover-bg: #3eaf7c;
   --vp-link-hover-text: #3eaf7c;
   --vp-link-border: #3eaf7c;
+  /* 添加过渡效果 */
+  transition: all 1s ease;
 }
 
 .dark {
@@ -89,6 +91,18 @@
 
 body {
   font-family: 'HarmonyOS Sans SC', sans-serif;
+  /* 为body添加过渡效果 */
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* 确保所有使用CSS变量的元素都有过渡效果 */
+.VPContent,
+.VPContent.has-sidebar,
+.VPLocalNav,
+.VPNavBar,
+.VPButton,
+.vp-doc a {
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 /* 导航栏半透明模糊效果 */
