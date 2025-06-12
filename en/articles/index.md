@@ -19,5 +19,6 @@ description: Index page for all articles
 
 ## Thoughts
 - [System Analyst Exam Experience](/en/articles/mind/system-analyst-exam-thoughts)
-- [Why Not Change Direction](/en/articles/mind/whynotChangeDirection)
+- [Why Not try Change ur Direction?](/en/articles/mind/whynotChangeDirection)
 - [Stop Writing Elegant Code with Fancy Tricks](/en/articles/mind/stop_writing_elegant_code_with_fancy_tricks)
+- [We are doing RAG in LIFE](/en/articles/mind/We_are_doing_RAG_in_LIFE)

@@ -1,10 +1,12 @@
 import { defineConfig } from 'vitepress'
 import { imageSizePlugin } from './plugins/image-size'
+import markdownItMark from 'markdown-it-mark'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   head: [
-    ['link', { rel: 'icon', href: 'https://img.makis-life.cn//images/20250602154403721.png' }]
+    ['link', { rel: 'icon', href: 'https://img.makis-life.cn//images/20250602154403721.png' }],
+    ['link', { rel: 'stylesheet', href: '/custom.css' }]
   ],
 
   // 全局搜索配置
@@ -35,6 +37,7 @@ export default defineConfig({
   markdown: {
     config: (md) => {
       md.use(imageSizePlugin)
+      md.use(markdownItMark)
     }
   },
 
@@ -78,7 +81,8 @@ export default defineConfig({
                 items: [
                   { text: '系统分析师考试心得', link: '/articles/mind/system-analyst-exam-thoughts' },
                   { text: '为什么不尝试改变一下方向？', link: '/articles/mind/whynotChangeDirection' },
-                  { text: '停止写优雅的代码和花哨的技巧', link: '/articles/mind/stop_writing_elegant_code_with_fancy_tricks' }
+                  { text: '停止写优雅的代码和花哨的技巧', link: '/articles/mind/stop_writing_elegant_code_with_fancy_tricks' },
+                  { text: '我们其实一直在做 RAG', link: '/articles/mind/We_are_doing_RAG_in_LIFE' }
                 ]
               }
             ]
@@ -129,7 +133,8 @@ export default defineConfig({
                 items: [
                   { text: 'System Analyst Exam Experience', link: '/en/articles/mind/system-analyst-exam-thoughts' },
                   { text: 'Why Not try Change ur Direction?', link: '/en/articles/mind/whynotChangeDirection' },
-                  { text: 'Stop Writing Elegant Code with Fancy Tricks', link: '/en/articles/mind/stop_writing_elegant_code_with_fancy_tricks' }
+                  { text: 'Stop Writing Elegant Code with Fancy Tricks', link: '/en/articles/mind/stop_writing_elegant_code_with_fancy_tricks' },
+                  { text: 'We are doing RAG in LIFE', link: '/en/articles/mind/We_are_doing_RAG_in_LIFE' }
                 ]
               }
             ]
